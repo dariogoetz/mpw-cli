@@ -58,6 +58,7 @@ fn main() {
         Color::White => id.to_string().white(),
     };
     println!("Identity: {}", id_str);
+    let masterkey = MasterKey::new_auth(&full_name, &password);
 
     let mut one_shot = false;
     loop {
@@ -78,7 +79,6 @@ fn main() {
             }
         };
         let site_name = site_name.trim();
-        let masterkey = MasterKey::new_auth(&full_name, &password);
         let password = masterkey.generate_password(site_name, &password_type, 1);
         println!("The password is: {}", password.green().bold());
 
