@@ -7,7 +7,7 @@ edition = "2021"
 
 [dependencies]
 
-mpw = { path="../mpw" }
+mpw = { git = "https://github.com/dariogoetz/mpw.git" }
 
 clap = "2"
 colored = "2"
